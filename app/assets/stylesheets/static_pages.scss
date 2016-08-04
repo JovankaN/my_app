@@ -1,3 +1,53 @@
 // Place all the styles related to the static_pages controller here.
+
+
+body {
+  position: relative;
+  width: 95%;
+  margin: 0 auto;
+  background-color: rgb(241, 241, 241);
+  color: #34495e;
+}
+
+h1,
+h2 {
+  color:#34495e;
+  font-family: Futura, Helvetica, Arial, sans-serif;
+}
+p {
+  color:#34495e;
+  font-family: Futura, Helvetica, Arial, sans-serif;
+}
+
+h1{
+  padding-top: 4em;
+}
+
+.navigation li{
+  display: inline-block;
+  float: right;
+  padding: 1em;
+}
+
+
+
+.temp-footer {
+  position: relative;
+  margin-top: 50%;
+  padding: 20px;
+  text-align: center;
+  background: grey;
+  color: yellow;
+  height: 20px;
+
+
+
+}
+
+
+
+
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
