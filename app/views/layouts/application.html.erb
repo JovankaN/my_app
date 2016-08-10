@@ -3,6 +3,7 @@
   <head>
     <title>My_app</title>
 
+    <%= csrf_meta_tags %>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
@@ -13,7 +14,6 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <%= csrf_meta_tags %>
 
 
   </head>
@@ -22,9 +22,9 @@
    <div class="navigation">
     <nav>
      <ul>
-      <li>Home</li>
-      <li>About</li>
-      <li>Contact</li>
+      <li><%= link_to "Home", static_pages_index_path %></li>
+      <li><%= link_to "About", static_pages_about_path %></li>
+      <li><%= link_to "Contact", static_pages_contact_path %></li>
      </ul>
     </nav>
    </div>
