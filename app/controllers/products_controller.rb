@@ -4,9 +4,13 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.limit(3)
-
-  end
+    if params[:q]
+      search_term = params[:q]
+      @products = Product.where("name LIKE ?", "%#{search_term}%")
+    else
+      @products = Product.all
+    end
+  end  # this is how we write a filted list of products that match or get as close to their search name,the other case is that if the user navigates to the index page without entering a search term, we want them to see all products instead.For our search condition, we will use the Active Record where method, to find products where their name matches the search_term variable. Most users may enter just part of the name if they can’t remember the whole thing. For this, SQL has a useful matching operator called LIKE,but In order to be able to search for words while ignoring whether some letters are upper or lower case, you need to use "ilike" and it allows you to include a “wildcard” character (%) to indicate that the matching term may be part of a longer string.So we need to put percentage characters around our search_term string.
 
   # GET /products/1
   # GET /products/1.json
