@@ -4,6 +4,7 @@ require_relative 'application'
 # Initialize the Rails application.
 Rails.application.initialize!
 
+#Enable ActionMailer to use Sendgrid plugin (Heroku)
 ActionMailer::Base.smtp_settings = {
   :address => 'smtp.sendgrid.net',
   :port => '587',
