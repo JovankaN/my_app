@@ -1,31 +1,46 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+<div class="container show-product">
+  <div class="col-sm-12 col-md-6">
+    <br/>
+    <br/>
+    <h3><%= @product.name %></h3>
+    <br>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+    <div>
+      <%= image_tag(@product.image_url, class: "img-zoom img-thumbnail", data_zoom_image: "@product.image_url") %>
+    </div>
+  </div><!--/col-->
 
-<p>
-  <strong>Image url:</strong>
-  <%= @product.image_url %>
-</p>
+  <div class="col-sm-12 col-md-6">
+    <br>
+     <h4>
+       <strong>Price:</strong>
+       <span class="glyphicon glyphicon-euro"></span>
+       <%= @product.price %>
+     </h4>
+     <br>
+     <h4>
+       <strong>Colour:</strong>
+       <%= @product.colour %>
+     </h4>
+      <br>
+
+     <h4>
+       <strong>Description:</strong>
+       <%= @product.description %>
+     </h4>
 
 
 
-<p>
-  <strong>Colour:</strong>
-  <%= @product.colour %>
-</p>
+    <h3><strong>Ratings</strong></h4>
+      <%= @product.highest_rating_comment %>
 
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+<br/>
+<br/>
+<br/>
+<br/>
+<%= link_to 'Edit', edit_product_path(@product),class:"btn btn-default" %> |
+<%= link_to 'Back', products_path, class:"btn btn-default" %>
+</div> <!--col-->
+</div><!-- container -->

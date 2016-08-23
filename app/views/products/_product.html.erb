@@ -1,15 +1,19 @@
  <% @products.each do |product| %>
      <div class="col-sm-2 col-md-4">
        <h3><%= link_to product.name, product %></h3>
-      <%= image_tag(product.image_url, class: "img-responsive" ) %>
-      <%= product.description %>
-      <%= product.colour %>
+      <%= image_tag(product.image_url, class: "img-thumbnail" ) %>
+
       <br>
-      <strong>$ <%= product.price %></strong>
-      <br>
-      <%= link_to 'Show', product %>
-      <%= link_to 'Edit', edit_product_path(product) %>
-      <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <strong>Price: $ <%= product.price %></strong>
+      <br/>
+      <strong>Color:<%= product.colour %></strong>
+      <br/>
+
+      <strong>Description<%= product.description %></strong>
+      <br/>
+      <%= link_to 'Show', product ,class:"btn btn-default"%>
+      <%= link_to 'Edit', edit_product_path(product), class:"btn btn-default" %>
+      <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-default"%>
       <br>
       <br>
      </div> <!-- /col -->
