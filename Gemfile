@@ -58,4 +58,6 @@ end
 gem 'devise'
 # the default settings will enable these basic functions but you can also customize the gem in many ways to add features for almost any possibility (Facebook login, reset password, and so on). Like a lot of gems, Devise is also designed to be very unobtrusive to keep things simple: most of the functionality and even the views are hidden from your application code and run behind the scenes, so it won’t add a ton of new files to your code. However, if you wish to customize the functionality or the views--like the login form for instance--you can run a command to add the views to your application views folder, and you can edit them from there.
 
+gem 'cancancan'
+# CanCanCan refers to each authorization rule as an ability. You can define authorization rules within the ability.rb file. In this example, we're going to define the ability for a user to edit his/her own profile--or more accurately--prevent him/her from editing another user's profile.
 
