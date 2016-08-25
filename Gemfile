@@ -61,3 +61,4 @@ gem 'devise'
 gem 'cancancan'
 # CanCanCan refers to each authorization rule as an ability. You can define authorization rules within the ability.rb file. In this example, we're going to define the ability for a user to edit his/her own profile--or more accurately--prevent him/her from editing another user's profile.
 
+gem 'will_paginate', '~> 3.1.0' #Pagination
