@@ -8,14 +8,14 @@
     <% @comment.each do |comment| %>
         <div class="row">
             <hr>
-            <p><%= comment.user.first_name %> <small><em><%= "#{time_ago_in_words(comment.created_at)} ago" %></em></small></p>
-            <p><%= comment.body %></p>
-            <p><%= "Rating: #{comment.rating}/5" %></p>
+            <p>
+            <%= comment.user.first_name %> <small><em><%= "#{time_ago_in_words(comment.created_at)} ago" %></em></small>
             <% if signed_in? && current_user.admin? %>
-              <%= link_to 'Destroy', product_comment_path(comment.product comment), method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-default"%>
-              <% end %>
-              <!-- Note that we always need to check if a user is signed in before calling any method on current_user. If there is no user signed in, the current_user variable does not exist and will raise a Nil error. -->
-
+              <%= link_to 'Destroy', product_comment_path(comment.product comment), method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-default"%>
+            <% end %>
+            </p>
+            <p><%= "Rating: #{comment.rating}/5" %></p>
+            <p><%= comment.body %></p>
         </div>
     <% end %>
 
