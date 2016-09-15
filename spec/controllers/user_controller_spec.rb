@@ -1,8 +1,9 @@
 require 'rails_helper'
 
-describe UsersController, typer: :controller do
-  let(:user) { User.create!(first_name: "Jovanka", last_name: "Nikolovski",email: "test@something.com", password: "123456")}
-  let(:another_user) { User.create!(first_name: "Jack", last_name: "Someone",email: "j.someone@yahoo.com", password: "789101")}
+describe UsersController, :type => :controller do
+  let(:user) { FactoryGirl.create(:user)}
+
+  let(:another_user) { FactoryGirl.create(:user)}
 
   describe 'GET #show' do
     context 'User is logged in' do
