@@ -12,26 +12,30 @@
     <div>
       <%= image_tag(@product.image_url, class: "img-zoom img-thumbnail", data_zoom_image: "@product.image_url") %>
     </div>
+    <br/>
+    <%= link_to 'Edit', edit_product_path(@product),class:"btn btn-default" %> |
+    <%= link_to 'Back', products_path, class:"btn btn-default" %>
+
   </div><!--/col-->
 
   <div class="col-sm-12 col-md-6">
     <div class="product-info">
     <br>
-     <h4>
-       <strong>Price:</strong>
-       <span class="glyphicon glyphicon-euro"></span>
-       <%= @product.price %>
-     </h4>
      <br>
+
+     <h4>
+       <strong>Description:</strong>
+       <%= @product.description %>
+     </h4>
      <h4>
        <strong>Colour:</strong>
        <%= @product.colour %>
      </h4>
       <br>
-
      <h4>
-       <strong>Description:</strong>
-       <%= @product.description %>
+       <strong>Price: $</strong>
+
+       <%= @product.price %>
      </h4>
 
      <br>
@@ -39,13 +43,12 @@
      <div class="rated" data-score="<%= @product.average_rating %>">
       <h4><strong>Average Rating</strong></h4>
      </div>
+     <br>
+     <br>
+     <%= form_tag "/payments/create" do %>
+       <%= render partial: "shared/stripe_checkout_button" %>
+     <% end %>
 
-
-
-<br/>
-
-<%= link_to 'Edit', edit_product_path(@product),class:"btn btn-default" %> |
-<%= link_to 'Back', products_path, class:"btn btn-default" %>
 
 </div> <!--col-->
 </div><!--/product-info-->
