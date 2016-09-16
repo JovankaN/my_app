@@ -68,3 +68,4 @@ gem 'cancancan'
 gem 'will_paginate', '~> 3.1.0' #Pagination
 gem 'stripe'
 gem 'byebug'
+gem "brakeman", :require => false
