@@ -9,8 +9,10 @@ Rails.application.routes.draw do
 
 
 
-
   get 'static_pages/index'
+
+  get 'payments/thanks_message'
+
   get 'static_pages/about'
 
   get 'static_pages/contact'
@@ -19,6 +21,7 @@ Rails.application.routes.draw do
 
   post 'static_pages/thank_you'
 
+  get 'payments/create'
 
   root 'static_pages#landing_page'
 
