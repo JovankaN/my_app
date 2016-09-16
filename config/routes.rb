@@ -11,13 +11,13 @@ Rails.application.routes.draw do
 
   get 'static_pages/index'
 
-  get 'payments/thanks_message'
-
   get 'static_pages/about'
 
   get 'static_pages/contact'
 
   get 'static_pages/landing_page'
+
+  get 'payments/thanks_message'
 
   post 'static_pages/thank_you'
 
