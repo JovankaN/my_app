@@ -10,7 +10,7 @@
     <br>
 
     <div>
-      <%= image_tag(@product.image_url, class: "img-zoom img-thumbnail", data_zoom_image: "@product.image_url") %>
+      <%= image_tag(@product.image_url, width: "350", class: "img-zoom img-thumbnail", data_zoom_image: "@product.image_url") %>
     </div>
     <br/>
     <%= link_to 'Edit', edit_product_path(@product),class:"btn btn-default" %> |
