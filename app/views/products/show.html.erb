@@ -28,7 +28,7 @@
        <%= @product.description %>
      </h4>
      <h4>
-       <strong>Colour:</strong>
+       <strong>Color:</strong>
        <%= @product.colour %>
      </h4>
       <br>
@@ -40,8 +40,8 @@
 
      <br>
      <br>
-      <div class="rated" data-score="<%= @product.average_rating %>" id="average-rating">
       <h4><strong>Average Rating: </strong></h4>
+      <div class="rated" data-score="<%= @product.average_rating %>">
      </div>
      <br>
      <br>
@@ -50,6 +50,8 @@
        <%= render partial: "shared/stripe_checkout_button" %>
      <% end %>
 
+
+    <%= render partial: 'comments' %>
 
 </div> <!--col-->
 </div><!--/product-info-->
