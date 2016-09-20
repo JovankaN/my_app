@@ -1,0 +1,4 @@
+$("#new_comment").html("Thank you for your review!");
+$('.product-comments').prepend("<%= j render @comment %>");
+//The j method call is used to escape the Ruby code inside our JavaScript.
+$("#average-rating").attr('data-score', "<%= @product.average_rating %>");
