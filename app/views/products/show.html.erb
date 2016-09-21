@@ -10,7 +10,7 @@
     <br>
 
     <div>
-      <%= image_tag(@product.image_url, width: "350", class: "img-zoom img-thumbnail", data_zoom_image: "@product.image_url") %>
+      <%= image_tag(@product.image_url, width: "400", class: "img-zoom img-thumbnail", data_zoom_image: "@product.image_url") %>
     </div>
     <br/>
     <%= link_to 'Edit', edit_product_path(@product),class:"btn btn-default" %> |
@@ -41,17 +41,18 @@
      <br>
      <br>
       <h4><strong>Average Rating: </strong></h4>
-      <div class="rated" data-score="<%= @product.average_rating %>">
+      <div class="rated" id="average-rating" data-score="<%= @product.average_rating %>">
      </div>
      <br>
      <br>
+
      <%= form_tag "/payments/create" do %>
       <%= hidden_field_tag(:product_id, @product.id) %>
        <%= render partial: "shared/stripe_checkout_button" %>
      <% end %>
 
 
-    <%= render partial: 'comments' %>
+
 
 </div> <!--col-->
 </div><!--/product-info-->
