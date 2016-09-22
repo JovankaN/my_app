@@ -1,16 +1,16 @@
-
+<% cache @product do %>
 
  <% @products.each do |product| %>
      <div class="col-sm-2 col-md-4">
-       <h3><%= link_to product.name, product %></h3>
+      <h3><%= link_to product.name, product %></h3>
       <%= image_tag(product.image_url, class: "img-thumbnail" ) %>
 
       <br>
+      <strong>Description<%= product.description %></strong>
+      <br/>
       <strong>Color:<%= product.colour %></strong>
       <br/>
 
-      <strong>Description<%= product.description %></strong>
-      <br/>
       <strong>Price: $ <%= product.price %></strong>
       <br/>
       <%= link_to 'Show', product ,class:"btn btn-default"%>
@@ -21,3 +21,4 @@
       <br>
      </div> <!-- /col -->
   <% end %>
+<% end %>
