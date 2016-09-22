@@ -69,3 +69,4 @@ gem 'will_paginate', '~> 3.1.0' #Pagination
 gem 'stripe'
 gem 'dalli'
 gem "brakeman", :require => false
+gem 'redis-rails'
