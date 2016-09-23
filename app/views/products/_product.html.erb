@@ -4,7 +4,9 @@
      <div class="col-sm-2 col-md-4">
       <h3><%= link_to product.name, product %></h3>
 
-      <%= image_tag(product.image_url , class: "img-thumbnail" ) %>
+      <% if product.image_url.present? %>
+        <%= image_tag(product.image_url , class: "img-thumbnail") %>
+      <% end %>
 
       <br>
       <strong>Description<%= product.description %></strong>
