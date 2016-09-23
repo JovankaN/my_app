@@ -17,10 +17,10 @@ class PaymentsController < ApplicationController
       if charge.paid
         Order.create(
           :product_id => @product_id,
-          :user_id => @current_user.id,
+          :user_id => @user.id,
           :total => @product.price)
       end
-
+      flash[:success] = "Payment processed successfully"
       rescue Stripe::CardError => e
       # The card has been declined
       body = e.json_body
