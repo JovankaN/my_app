@@ -17,8 +17,8 @@ Rails.application.routes.draw do
 
   get 'static_pages/landing_page'
 
-  get '/payments/thanks_message'
   post '/payments/create'
+  get '/payments/thanks_message'
 
   post 'static_pages/thank_you'
 
