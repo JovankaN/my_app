@@ -243,7 +243,7 @@ DEPENDENCIES
   listen (~> 3.0.5)
   pg
   puma (~> 3.0)
-  rails (~> 5.0.0.1)
+  rails (~> 5.0.0)
   rails-controller-testing
   redis-rails
   rspec-rails (~> 3.5)
@@ -259,7 +259,7 @@ DEPENDENCIES
   will_paginate (~> 3.1.0)
 
 RUBY VERSION
-   ruby 2.3.1p112
+   ruby 2.2.4p230
 
 BUNDLED WITH
    1.13.1

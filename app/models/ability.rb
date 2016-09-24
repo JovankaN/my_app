@@ -9,7 +9,8 @@ class Ability
       can :read, :all
       can :manage, User, id: user.id
       can [:create, :destroy], Comment, user_id: user.id
-      cannot [:destroy,], Product
+      # can [:edit, :update], Product
+      cannot [:destroy], Product
     end
 
   end
