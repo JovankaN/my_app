@@ -94,6 +94,7 @@ Rails.application.configure do
                      :down_retry_delay => 60
                     }
 
-
+  config.web_socket_server_url = "wss://radiant-stream-35074.herokuapp.com/cable"
+  config.action_cable.allowed_request_origins = ['https://radiant-stream-35074.herokuapp.com', 'http://radiant-stream-35074.herokuapp.com']
 
 end
