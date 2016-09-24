@@ -22,9 +22,15 @@
    <div class="carousel-inner" role="listbox">
     <% @products.each do |product| %>
       <div class="item <%= "active" if product == @products.first %>">
+<<<<<<< HEAD
 
       <%= image_tag(product.image_url, class: "img-responsive") %>
 
+=======
+        <% if product.image_url.present? %>
+          <%= image_tag(product.image_url, class: "img-responsive") %>
+        <% end %>
+>>>>>>> 4e65cdc94d7a6a880ac3e75142ce2995c22bc85e
         <div class="carousel-caption">
         <p class="product-name"><%= product.name %></p>
         </div>
@@ -44,5 +50,3 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-
-

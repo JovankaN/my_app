@@ -3,7 +3,14 @@
  <% @products.each do |product| %>
      <div class="col-sm-2 col-md-4">
       <h3><%= link_to product.name, product %></h3>
+<<<<<<< HEAD
       <%= image_tag(product.image_url , class: "img-thumbnail" ) %>
+=======
+
+      <% if product.image_url.present? %>
+        <%= image_tag(product.image_url , class: "img-thumbnail") %>
+      <% end %>
+>>>>>>> 4e65cdc94d7a6a880ac3e75142ce2995c22bc85e
 
       <br>
       <strong>Description<%= product.description %></strong>
