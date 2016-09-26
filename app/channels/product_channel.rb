@@ -8,8 +8,9 @@ class ProductChannel < ApplicationCable::Channel
     # Any cleanup needed when channel is unsubscribed
   end
 
-  def listen
-    stop_all_streams["product_id"]
+  def listen(data)
+    stop_all_streams
+    stream_for data['product_id']
   end
 
 end

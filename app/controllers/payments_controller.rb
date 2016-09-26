@@ -21,6 +21,7 @@ class PaymentsController < ApplicationController
           :total => @product.price)
       end
       flash[:success] = "Payment processed successfully"
+
       rescue Stripe::CardError => e
       # The card has been declined
       body = e.json_body
