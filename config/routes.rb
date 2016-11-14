@@ -18,8 +18,8 @@ Rails.application.routes.draw do
   get 'static_pages/landing_page'
 
   get 'payments/thanks_message'
+  post 'payments/create'
 
-  post '/payments/create'
 
   post 'static_pages/thank_you'
 
