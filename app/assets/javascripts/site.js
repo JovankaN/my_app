@@ -3,7 +3,7 @@
 
 var refreshRating = function() {
     $('.rating').raty( { path: '/assets', scoreName: 'comment[rating]' });
-    $('.rated').raty({ path: '/assets',
+    $('.rated').raty({ path: '/assets/javascripts',
         readOnly: true,
         score: function() {
             return $(this).attr('data-score');

@@ -9,10 +9,9 @@
     <br/>
     <h3><%= @product.name %></h3>
     <br>
-
     <div>
       <% if @product.image_url.present? %>
-        <%= image_tag(@product.image_url, width: "400", class: "img-zoom img-thumbnail", data_zoom_image: "@product.image_url") %>
+        <%= image_tag(@product.image_url, width: "500", class: "img-zoom img-thumbnail", data_zoom_image: "@product.image_url") %>
       <% end %>
     </div>
     <br/>
@@ -37,20 +36,20 @@
       <br>
      <h4>
        <strong>Price: $</strong>
-
        <%= @product.price %>
      </h4>
 
      <br>
      <br>
-     <% cache @product do %>
       <h4><strong>Average Rating: </strong></h4>
-      <div class="rated" id="average-rating" data-score="<%= @product.average_rating %>">
-     </div>
-     <br>
-     <br>
 
+     <%= @product.average_rating do %>
+      <div class="rated" id="average_rating" data-score="<%= @product.average_rating %>">
+     </div>
      <% end %>
+     <br>
+     <br>
+     <br>
      <%= form_tag "/payments/create" do %>
       <%= hidden_field_tag(:product_id, @product.id) %>
        <%= render partial: "shared/stripe_checkout_button" %>
@@ -64,8 +63,11 @@
 
 </div><!-- container -->
 <br>
-<div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
-<div class="col-md-6 col-xs-12">
+<!-- <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
+<div class="col-md-6 col-xs-12"> -->
+
+
+
 
   <%= render 'comments' %>
   <%= render 'new_comment' %>
