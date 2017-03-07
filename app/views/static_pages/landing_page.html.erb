@@ -20,7 +20,7 @@
   <div class="container anchor" id="process">
   <div class="col-xs-12 col-md-12">
    <div class="carousel-inner" role="listbox">
-    <% @products.each do |product| %>
+    <% @products.uniq.each do |product| %>
       <div class="item <%= "active" if product == @products.first %>">
         <% if product.image_url.present? %>
           <%= image_tag(product.image_url, class: "img-responsive") %>
