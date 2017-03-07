@@ -11,7 +11,7 @@ class ProductsController < ApplicationController
 
     if params[:q]
       search_term = params[:q]
-      @products = Product.where("name ilike ?", "%#{search_term}%")
+      @products = Product.where("name Like ?", "%#{search_term}%")
 
     else
       @products = Product.all
@@ -30,7 +30,7 @@ class ProductsController < ApplicationController
   # GET /products/new
   def new
 
-    @product = Product.new
+    @products = Product.new
 
   end
 
@@ -46,7 +46,7 @@ class ProductsController < ApplicationController
 
     respond_to do |format|
       if @product.save
-        format.html { redirect_to '/products', notice: 'Product was successfully created.' }
+        format.html { redirect_to 'product_url', notice: 'Product was successfully created.' }
         format.json { render :show, status: :created, location: @product }
       else
         format.html { render :new }

@@ -5,4 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-# Product.create(:name => "seed-generated product", :description => "I also created this product without using the HTML form!")
+ Product.create(:name => "Ancient Jewellery ", :description => "I also created this product without using the HTML form!", :image_url => "http://www.heritagedaily.com/wp-content/uploads/2011/12/horde11.jpg", :colour => "brown", :price => 187.98 )
+Product.create(:name => "Ancient Jewellery ", :description => "I also created this product without using the HTML form!", :image_url => "http://www.heritagedaily.com/wp-content/uploads/2011/12/horde11.jpg", :colour => "brown", :price => 187.98 )
+Product.create(:name => "Ancient Jewellery ", :description => "I also created this product without using the HTML form!", :image_url => "http://www.heritagedaily.com/wp-content/uploads/2011/12/horde11.jpg", :colour => "brown", :price => 187.98 )
